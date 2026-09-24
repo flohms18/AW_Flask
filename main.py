@@ -1,4 +1,7 @@
-def hello():
-    print("Hello There")
+from flask import Flask
 
-hello()
+app = Flask(__name__)
+
+@app.route('/')
+def hello():
+    return '<p>Hello There</p>'
